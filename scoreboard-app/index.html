@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-box">
+        <div id="top-section">
+        <div id="timer" class="digital-time">00:00:00</div>
+
+        <div id="timer-btns">
+            <button id="start-btn" onclick="startTimer()">START</button>
+            <button id="stop-btn" onclick="stopTimer()">STOP</button>
+            <button id="reset-btn" onclick="resetTimer()">RESET</button>
+        </div>
+    </div>
+
+    <div id="teams-wrapper">
+    <!-- Team A -->
+    <div class="team-column">
+        <p class="team-name">TEAM-A</p>
+        <p id="points-a" class="points">0</p>
+        <div class="add-points">
+            <div class="point-box" onclick="addPoints('a', 1)">+1</div>
+            <div class="point-box" onclick="addPoints('a', 2)">+2</div>
+            <div class="point-box" onclick="addPoints('a', 3)">+3</div>
+        </div>
+    </div>
+
+    <!-- Team B -->
+    <div class="team-column">
+        <p class="team-name">TEAM-B</p>
+        <p id="points-b" class="points">0</p>
+        <div class="add-points">
+            <div class="point-box" onclick="addPoints('b', 1)">+1</div>
+            <div class="point-box" onclick="addPoints('b', 2)">+2</div>
+            <div class="point-box" onclick="addPoints('b', 3)">+3</div>
+        </div>
+    </div>
+</div>
+
+<div class="new-game">
+    <button id="new-game-btn" class="new-game-btn" onclick="newGame()">NEW GAME</button>
+</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
